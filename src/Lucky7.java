@@ -3,28 +3,26 @@ import java.util.Scanner;
 
 public class Lucky7 {
     public static void main(String[] args) {
+
         Random rand = new Random();
         Scanner scanner = new Scanner(System.in);
-        
 
         System.out.print("Syötä valitsemasi rahasumma tasalukuna: ");
         int rahat = scanner.nextInt();
         //Skippaa rivinvaihdon
         scanner.nextLine(); 
         
-        while (rahat > 0) {
-            
+        while (rahat > 0) { 
             int[] numerot = new int[3];
             for (int i = 0; i < 3; i++) {
                 numerot[i] = rand.nextInt(11);
             }
-            
             System.out.println("Arvotut numerot: ");
             for (int numero : numerot) {
                 System.out.print(numero + " ");
             }
             System.out.println();
-            
+
             // Lasketaan seiskat voittoja varten
             int seiskat = 0;
             for (int numero : numerot) {
@@ -57,7 +55,6 @@ public class Lucky7 {
                 System.out.println("Rahasi loppuivat. Peli päättyy.");
                 break;
             }
-            
             System.out.print("Haluatko pelata uudestaan? Rahaa on nyt jäljellä " + rahat + " euroa.\nPaina Enter jatkaaksesi tai kirjoita 'e' lopettaaksesi: ");
             String vastaus = scanner.nextLine();
             if (vastaus.equalsIgnoreCase("e")) {
