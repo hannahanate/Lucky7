@@ -55,14 +55,13 @@ public class Lucky7 {
                 System.out.println("Rahasi loppuivat. Peli päättyy.");
                 break;
             }
-            System.out.print("Haluatko pelata uudestaan? Rahaa on nyt jäljellä " + rahat + " euroa.\nPaina Enter jatkaaksesi tai kirjoita 'e' lopettaaksesi: ");
+            System.out.print("Haluatko jatkaa? Rahaa on jäljellä " + rahat + " euroa.\nPaina Enter jatkaaksesi tai kirjoita 'e' lopettaaksesi: ");
             String vastaus = scanner.nextLine();
             if (vastaus.equalsIgnoreCase("e")) {
                 System.out.println("Kiitos! Peli päättyi.");
                 break;
             }
         }
-        
         scanner.close();
     }
 }
