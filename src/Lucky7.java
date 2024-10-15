@@ -7,9 +7,9 @@ public class Lucky7 {
         Scanner scanner = new Scanner(System.in);
         
 
-        System.out.print("Kuinka monta euroa haluat syöttää? Syötä valitsemasi summa tasalukuna: ");
+        System.out.print("Syötä valitsemasi rahasumma tasalukuna: ");
         int rahat = scanner.nextInt();
-        //skippaa rivinvaihdon
+        //Skippaa rivinvaihdon
         scanner.nextLine(); 
         
         while (rahat > 0) {
